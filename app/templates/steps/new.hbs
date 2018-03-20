@@ -1,0 +1,15 @@
+<div>
+  {{#ui-form newValue=model  validation="save" cancel="cancel" bigIcon='step forward' smallIcon='plus' header='Steps' description='Adding an object'}}
+    <div class="field">
+      <label id="" class="" for="frmEdit-title">Title</label>
+      <div id="div-frmEdit-title" class="ui input">
+        {{input id="frmEdit-title" value=model.title placeholder="Title"}}
+      </div>
+    </div>
+    <select class="ui selection dropdown" onchange={{action (mut model.story) value="target.value"}}>
+      {{#each model.stories as |story|}}
+        <option value="{{story}}">{{story.code}}</option>
+      {{/each}}
+    </select>
+  {{/ui-form}}
+</div>{{outlet}}
