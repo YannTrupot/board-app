@@ -4,9 +4,7 @@ import EmberObject from '@ember/object';
 export default Route.extend({
   model(){
     return EmberObject.create({
-      "stories" : this.get('store').findAll('story'),
-      "title" : "",
-      "story" : ""
+      "title" : ""
     });
   },
   actions:{

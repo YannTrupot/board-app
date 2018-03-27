@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('new');
     this.route('delete',{ path: 'delete/:project_id' });
     this.route('update',{ path: 'update/:project_id' });
+    this.route('board');
   });
   this.route('developers', function() {
     this.route('new');
@@ -31,6 +32,11 @@ Router.map(function() {
     this.route('new');
     this.route('update',{ path: 'update/:step_id' });
     this.route('delete',{ path: 'delete/:step_id' });
+  });
+  this.route('tasks', function() {
+    this.route('new');
+    this.route('delete',{ path: 'delete/:task_id' });
+    this.route('update',{ path: 'update/:task_id' });
   });
 });
 

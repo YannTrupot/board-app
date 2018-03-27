@@ -1,3 +1,35 @@
-<div class="ui segment">Index</div>
+<div class="ui segment">
+
+  <div class="ui grid container" style="margin-top: 5px">
+    {{#each model.models as |modelClass| }}
+
+        <div class="eight wide column">
+          <div class="ui item">
+            <div class="ui image" style="float: left">
+              <i class="folder icon" style="font-size: 50px;margin-top: 28px"></i>
+            </div>
+            <div class="content">
+              <div class="extra" style="color: #AAA;">
+                {{modelClass.objects.length}} items
+              </div>
+              <div class="header" style="font-size: 24px;"><b>{{modelClass.name}}</b></div>
+
+              <div class="ui basic buttons" style="margin-top: 8px">
+                  <button class="ui button">
+                    <i class="eye icon"></i>
+                      See all
+                  </button>
+                  <div class="ui divider"></div>
+                  <button class="ui button">
+                    <i class="plus icon"></i>
+                      Add new...
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    {{/each}}
+  </div>
+</div>
 
 {{outlet}}

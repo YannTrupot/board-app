@@ -5,23 +5,21 @@ import RSVP from 'rsvp';
 export default Route.extend({
   model(params){
     return new RSVP.hash({
-      colors : ['black','blue','green','orange','pink','purple','red','teal','yellow','positive','negative'],
-      tag: this.get('store').findRecord('tag',params.tag_id)
+      step: this.get('store').findRecord('step',params.step_id)
     });
   },
   afterModel(model){
-    Ember.set(model,'data',EmberObject.create(JSON.parse(JSON.stringify(model.tag))));
+    Ember.set(model,'data',EmberObject.create(JSON.parse(JSON.stringify(model.step))));
   },
   actions:{
-    save(tag,data){
-      Ember.set(tag,'title',data.title);
-      Ember.set(tag,'color',data.color);
-      tag.save().then(()=>{
-        this.transitionTo("tags");
+    save(step,data){
+      Ember.set(step,'title',data.title);
+      step.save().then(()=>{
+        this.transitionTo("steps");
       })
     },
     cancel(){
-      this.transitionTo("tags");
+      this.transitionTo("steps");
     }
   }
 });

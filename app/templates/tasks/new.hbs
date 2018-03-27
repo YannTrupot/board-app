@@ -1,0 +1,15 @@
+<div>
+  {{#ui-form newValue=model validation="save" cancel="cancel" bigIcon='tasks' smallIcon='plus' header='Tasks' description='Adding an object'}}
+    <div class="field">
+      <label id="" class="" for="frmEdit-content">Content</label>
+      <div id="div-frmEdit-content" class="ui input">
+        {{input id="frmEdit-content" value=model.content placeholder="Content"}}
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="story">Story</label>
+      {{multi-select selected=model.idStory name="story" placeholder="Story" elements=model.stories selectedElements=model.story}}
+    </div>
+  {{/ui-form}}
+</div>{{outlet}}
