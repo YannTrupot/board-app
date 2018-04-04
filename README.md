@@ -1,7 +1,13 @@
 # boards-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Application gestion de projets SCRUM réalisé à l'aide d'EMBERJS dans le cadre du module Client Riche.
+
+Les fonctionnalités mise en oeuvres: 
+  - Ajout / modification / suppression d'un developer
+  - Ajout / modification / suppression d'un tag
+  - Ajout / modification / suppression d'une task
+  - Ajout / modification / suppression d'une step
+  - Création d'un index affichant le nombre respectifs d'objets contenu dans la base MongoDB
 
 ## Prerequisites
 
